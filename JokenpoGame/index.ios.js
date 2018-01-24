@@ -4,9 +4,10 @@ import {
   Text,
   View,
   Button,
-  Image,
   StyleSheet,
 } from 'react-native';
+import Topo from './src/components/Topo';
+import IconResult from './src/components/IconResult';
 
 class JokenpoGame extends Component {
 
@@ -87,14 +88,14 @@ class JokenpoGame extends Component {
             />
           </View>
 
-          <View style={styles.btnEscolha}>
+          <View style={styles.btnChoice}>
             <Button
               title="Papel"
               onPress={() => { this.jokenpo('Papel'); }}
             />
           </View>
 
-          <View style={styles.btnEscolha}>
+          <View style={styles.btnChoice}>
             <Button
               title="Tesoura"
               onPress={() => { this.jokenpo('Tesoura'); }}
@@ -108,7 +109,7 @@ class JokenpoGame extends Component {
 
           <IconResult
             choice={this.state.userChoice}
-            player={'Usuário'}
+            player={'Você'}
           />
           <IconResult
             choice={this.state.computerChoice}
@@ -117,44 +118,6 @@ class JokenpoGame extends Component {
         </View>
       </View>
     );
-  }
-}
-
-class Topo extends Component {
-  render() {
-    return (
-      <View>
-        <Image source={require('./src/img/jokenpo.png')} />
-      </View>
-    )
-  }
-}
-
-class IconResult extends Component {
-  render() {
-    if (this.props.choice === 'Pedra') {
-      return (
-        <View>
-          <Text>{this.props.player}</Text>
-          <Image source={require('./src/img/pedra.png')} />
-        </View>
-      );
-    } else if (this.props.choice === 'Papel') {
-      return (
-        <View>
-          <Text>{this.props.player}</Text>
-          <Image source={require('./src/img/papel.png')} />
-        </View>
-      );
-    } else if (this.props.choice === 'Tesoura') {
-      return (
-        <View>
-          <Text>{this.props.player}</Text>
-          <Image source={require('./src/img/tesoura.png')} />
-        </View>
-      );
-    }
-    return false;
   }
 }
 
@@ -176,6 +139,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
     height: 60,
-  }
+  },
 });
 AppRegistry.registerComponent('JokenpoGame', () => JokenpoGame);
