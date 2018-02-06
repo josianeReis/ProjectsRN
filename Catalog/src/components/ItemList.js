@@ -27,7 +27,7 @@ class ItemList extends Component {
   }
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={{ backgroundColor: '#DDD' }}>
         { this.state.itemList.map(item => (
           <Item
             key={item.titulo}
