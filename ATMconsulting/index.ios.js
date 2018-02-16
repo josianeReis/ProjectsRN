@@ -3,14 +3,13 @@ import {
   AppRegistry,
   View
 } from 'react-native';
-import NavigationBar from './src/components/NavigationBar'
+import ClientScene from './src/components/ClientScenes'
 
 export default class ATMconsulting extends Component {
   render() {
     return (
       <View>
-
-      <NavigationBar />
+        <ClientScene />
       </View>
     );
   }
