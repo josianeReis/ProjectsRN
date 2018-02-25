@@ -4,8 +4,9 @@ import {
   StatusBar,
   Image,
   StyleSheet,
+  TouchableHighlight,
 } from 'react-native';
-import NavigationBar from './NavigationBar'
+import NavigationBar from './NavigationBar';
 
 const logo = require('./../img/logo.png');
 const myClient = require('./../img/myClient.png');
@@ -27,8 +28,23 @@ class MainScene extends Component {
         </View>
         <View style={styles.containerMenu}>
           <View style={styles.menuItems}>
-            <Image style={styles.imgMenu} source={myClient} />
-            <Image style={styles.imgMenu} source={contactMenu} />
+
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'clientScene' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={myClient} />
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'contato' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={contactMenu} />
+            </TouchableHighlight>
+
           </View>
           <View style={styles.menuItems}>
             <Image style={styles.imgMenu} source={companyMenu} />

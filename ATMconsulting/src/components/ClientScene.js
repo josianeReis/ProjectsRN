@@ -6,7 +6,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import NavigationBar from './NavigationBar'
+import NavigationBar from './NavigationBar';
 
 const clientDetails = require('./../img/clientDetails.png');
 const client1 = require('./../img/client1.png');
@@ -19,12 +19,16 @@ class ClientScene extends Component {
         <StatusBar
           backgroundColor='#CCC'
         />
-        <NavigationBar />
+        <NavigationBar
+          back
+          navigator={this.props.navigator}
+        />
 
         <View style={styles.headerContainer}>
-          <Image source={clientDetails} />
+            <Image source={clientDetails} />
           <Text style={styles.txtTitle}>Nossos Clientes</Text>
         </View>
+
         <View style={styles.clientDetails}>
           <Image source={client1} />
           <Text style={styles.txtClient}>Lorem ipsum dolor sit amet</Text>
