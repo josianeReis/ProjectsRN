@@ -47,8 +47,21 @@ class MainScene extends Component {
 
           </View>
           <View style={styles.menuItems}>
-            <Image style={styles.imgMenu} source={companyMenu} />
-            <Image style={styles.imgMenu} source={myServices} />
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'company' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={companyMenu} />
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'services' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={myServices} />
+            </TouchableHighlight>
           </View>
         </View>
       </View>
