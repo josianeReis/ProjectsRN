@@ -15,13 +15,14 @@ const client2 = require('./../img/client2.png');
 class ClientScene extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.allView}>
         <StatusBar
-          backgroundColor='#CCC'
+          backgroundColor='#B9C941'
         />
         <NavigationBar
           back
           navigator={this.props.navigator}
+          background='#B9C941'
         />
 
         <View style={styles.headerContainer}>
@@ -43,6 +44,10 @@ class ClientScene extends Component {
 }
 
 const styles = StyleSheet.create({
+  allView: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
   headerContainer: {
     flexDirection: 'row',
     marginTop: 20,

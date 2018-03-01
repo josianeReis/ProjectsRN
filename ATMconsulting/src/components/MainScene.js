@@ -30,6 +30,8 @@ class MainScene extends Component {
           <View style={styles.menuItems}>
 
             <TouchableHighlight
+              underlayColor={'#B9C941'}
+              activeOpacity={0.3}
               onPress={() => {
                 this.props.navigator.push({ id: 'clientScene' });
               }}
@@ -38,8 +40,10 @@ class MainScene extends Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              underlayColor={'#61BD8C'}
+              activeOpacity={0.3}
               onPress={() => {
-                this.props.navigator.push({ id: 'contato' });
+                this.props.navigator.push({ id: 'contact' });
               }}
             >
               <Image style={styles.imgMenu} source={contactMenu} />
@@ -48,6 +52,8 @@ class MainScene extends Component {
           </View>
           <View style={styles.menuItems}>
             <TouchableHighlight
+              underlayColor={'#EC7148'}
+              activeOpacity={0.3}
               onPress={() => {
                 this.props.navigator.push({ id: 'company' });
               }}
@@ -56,6 +62,8 @@ class MainScene extends Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              underlayColor={'#19D1C8'}
+            a ctiveOpacity={0.3}
               onPress={() => {
                 this.props.navigator.push({ id: 'services' });
               }}

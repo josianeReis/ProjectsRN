@@ -17,44 +17,37 @@ export default class ATMconsulting extends Component {
         renderScene={(route, navigator) => {
           /* definir a cena com base na rota */
 
-          if (route.id === 'mainScene') {
-            //exibe cena principal
-            return (
-              <MainScene navigator={navigator} />
-            );
-          }
-
-          if (route.id === 'clientScene') {
-            //exibe cena clientes
-            return (
-              <ClientScene
-                navigator={navigator}
-              />
-            );
-          }
-
-          if (route.id === 'contato') {
-            return (
-              <ContactScene
-                navigator={navigator}
-              />
-            );
-          }
-
-          if (route.id === 'company') {
-            return (
-              <CompanyScene
-                navigator={navigator}
-              />
-            );
-          }
-
-          if (route.id === 'services') {
-            return (
-              <ServicesScene
-                navigator={navigator}
-              />
-            );
+          switch (route.id) {
+            case 'mainScene':
+              return (
+                <MainScene navigator={navigator} />
+              );
+            case 'clientScene':
+              return (
+                <ClientScene
+                  navigator={navigator}
+                />
+              );
+            case 'contact':
+              return (
+                <ContactScene
+                  navigator={navigator}
+                />
+              );
+            case 'company':
+              return (
+                <CompanyScene
+                  navigator={navigator}
+                />
+              );
+            case 'services':
+              return (
+                <ServicesScene
+                  navigator={navigator}
+                />
+              );
+            default:
+              return false;
           }
         }}
       />

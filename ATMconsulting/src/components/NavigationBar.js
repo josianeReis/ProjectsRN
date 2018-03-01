@@ -13,8 +13,12 @@ class NavigationBar extends Component {
   render() {
     if (this.props.back) {
       return (
-        <View style={styles.titleBar}>
+        <View
+          style={[styles.titleBar, { backgroundColor: this.props.background }]}
+        >
           <TouchableHighlight
+            underlayColor={this.props.background}
+            activeOpacity={0.3}
             onPress={() => {
               this.props.navigator.pop();
             }}
