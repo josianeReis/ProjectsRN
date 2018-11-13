@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   View,
   Image,
@@ -12,7 +11,7 @@ const playBtn = require('../img/play_button.png');
 const aboutBtn = require('../img/about_game.png');
 const otherBtn = require('../img/other_games.png');
 
-export default class FlipCoinGame extends Component {
+class MainScene extends Component {
   render() {
     return (
       <View style={styles.mainScene}>
@@ -49,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('FlipCoinGame', () => FlipCoinGame);
+export default MainScene;
