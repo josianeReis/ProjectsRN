@@ -11,22 +11,22 @@ class IconResult extends Component {
     if (this.props.choice === 'Pedra') {
       return (
         <View>
-          {/* <Text style={styles.txtPlayer}>{this.props.player}</Text>
-          <Image source={require('./../img/pedra.png')} /> */}
+          <Text style={styles.txtPlayer}>{this.props.player}</Text>
+          <Image source={require('./../img/pedra.png')} />
         </View>
       );
     } else if (this.props.choice === 'Papel') {
       return (
         <View>
-          {/* <Text style={styles.txtPlayer}>{this.props.player}</Text>
-          <Image source={require('./../img/papel.png')} /> */}
+          <Text style={styles.txtPlayer}>{this.props.player}</Text>
+          <Image source={require('./../img/papel.png')} />
         </View>
       );
     } else if (this.props.choice === 'Tesoura') {
       return (
         <View>
-          {/* <Text style={styles.txtPlayer}>{this.props.player}</Text>
-          <Image source={require('./../img/tesoura.png')} /> */}
+          <Text style={styles.txtPlayer}>{this.props.player}</Text>
+          <Image source={require('./../img/tesoura.png')} />
         </View>
       );
     }
